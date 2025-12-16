@@ -15,14 +15,14 @@ public class Main {
 
         // the start of auto save thread
         AutoSaveTask autoSaveTask = new AutoSaveTask(manager);
-        Thread autoSaveThread = new Thread(autoSaveTask);
+        Thread autoSaveThread = new Thread(autoSaveTask); 
 
        
         autoSaveThread.setDaemon(true);
         autoSaveThread.start();
 
         
-        System.out.println("1- CREATE");
+        System.out.println("1- CREATE"); //create new student object
         Student s1 = new Student("451223465", "Lamar Fahad", "IT", 4.5);
         Student s2 = new Student("451273738", "Sara Saqer", "CS", 3.6);
 
