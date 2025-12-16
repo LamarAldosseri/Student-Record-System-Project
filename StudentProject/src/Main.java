@@ -6,7 +6,7 @@ import thread.AutoSaveTask;
 import thread.ReportTask;
 
 
-
+// The main class for the system operations
 public class Main {
     public static void main(String[] args) {
 
@@ -26,20 +26,24 @@ public class Main {
         Student s1 = new Student("451223465", "Lamar Fahad", "IT", 4.5);
         Student s2 = new Student("451273738", "Sara Saqer", "CS", 3.6);
 
+        //Add students to the manager and save them
         manager.addStudent(s1);
         manager.addStudent(s2);
         manager.addStudent(new Student("451283986", "Ghala Omar", "COE", 4.0));
 
+        // Get and print all students currently in the manager's list
         System.out.println("\n2- READ");
         for (Student s : manager.getAllStudents()) {
             System.out.println(s);
         }
 
+        // Update the GPA for student s1
         System.out.println("\n3- UPDATE");
         if (manager.updateStudent("451223465", "Lamar Fahad", "IT", 4.75)) {
             System.out.println("Student 451223465 updated successfully.");
         }
 
+        // Find and print the student to confirm the update
         System.out.println("\n4- READ (Find by ID)");
         Student foundStudent = manager.findStudentById("451223465");
         if (foundStudent != null) {
@@ -48,11 +52,13 @@ public class Main {
             System.out.println("Student not found.");
         }
 
+        // Remove student s2
         System.out.println("\n5- DELETE");
         if (manager.removeStudent("451273738")) {
             System.out.println("Student 451273738 removed successfully.");
         }
 
+        // Print the final list after all the operations
         System.out.println("\n6- Final list");
         for (Student s : manager.getAllStudents()) {
             System.out.println(s);
