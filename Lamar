@@ -1,0 +1,2 @@
+git fetch origin && git switch -c Lamar origin/main
+git push -u origin Lamar
