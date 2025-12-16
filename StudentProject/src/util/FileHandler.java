@@ -55,6 +55,7 @@ public class FileHandler {
             }
 
         } catch (Exception e) {
+            // Handle errors during file writing 
             System.out.println("Error saving file: " + e.getMessage());
         }
     }
